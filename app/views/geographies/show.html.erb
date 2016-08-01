@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>State:</strong>
+  <%= @geography.state %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @geography.city %>
+</p>
+
+<p>
+  <strong>Neighborhood:</strong>
+  <%= @geography.neighborhood %>
+</p>
+
+<%= link_to 'Edit', edit_geography_path(@geography) %> |
+<%= link_to 'Back', geographies_path %>
