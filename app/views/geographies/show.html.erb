@@ -1,19 +1,28 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Geography -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Geography %></h1>
+</div>
 
-<p>
-  <strong>State:</strong>
-  <%= @geography.state %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:state) %></dt>
+      <dd><pre class="prettyprint"><%= @geography.state %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:city) %></dt>
+      <dd><pre class="prettyprint"><%= @geography.city %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:neighborhood) %></dt>
+      <dd><pre class="prettyprint"><%= @geography.neighborhood %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>City:</strong>
-  <%= @geography.city %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              geographies_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_geography_path(@geography), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              geography_path(@geography),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Neighborhood:</strong>
-  <%= @geography.neighborhood %>
-</p>
-
-<%= link_to 'Edit', edit_geography_path(@geography) %> |
-<%= link_to 'Back', geographies_path %>
