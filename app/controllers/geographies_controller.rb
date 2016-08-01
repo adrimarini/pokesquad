@@ -10,6 +10,7 @@ class GeographiesController < ApplicationController
   # GET /geographies/1
   # GET /geographies/1.json
   def show
+    @post = Post.new
   end
 
   # GET /geographies/new

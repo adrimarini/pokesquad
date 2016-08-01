@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Team.destroy_all
+Geography.destroy_all
+
+teams = Team.create([
+  {name: "red"},
+  {name: "yellow"},
+  {name: "blue"},
+  ])
+
+geographies = Geography.create([
+    {neighborhood: "Santa Monica"},
+    {neighborhood: "Venice"},
+    {neighborhood: "Downtown"},
+    {neighborhood: "Beverly Hills"},
+    ])
