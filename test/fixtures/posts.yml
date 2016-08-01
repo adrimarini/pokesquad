@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  meet_time: MyString
+  location: MyText
+  content: MyText
+  user_id: 
+  geography_id: 
+
+two:
+  meet_time: MyString
+  location: MyText
+  content: MyText
+  user_id: 
+  geography_id: 
